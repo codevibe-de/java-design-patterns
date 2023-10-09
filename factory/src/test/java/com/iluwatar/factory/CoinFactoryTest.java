@@ -24,15 +24,15 @@
  */
 package com.iluwatar.factory;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CoinFactoryTest {
 
-  @Test
-  void shouldReturnGoldCoinInstance() {
-    final var goldCoin = CoinFactory.getCoin(CoinType.GOLD);
-    assertTrue(goldCoin instanceof GoldCoin);
-  }
+    @Test
+    void shouldReturnGoldCoinInstance() {
+        final var goldCoin = CoinFactory.getCoin(CoinType.GOLD);
+        assertTrue(goldCoin instanceof GoldCoin);
+    }
 }

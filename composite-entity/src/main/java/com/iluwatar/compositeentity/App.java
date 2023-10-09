@@ -24,8 +24,9 @@
  */
 package com.iluwatar.compositeentity;
 
-import java.util.Arrays;
 import lombok.extern.slf4j.Slf4j;
+
+import java.util.Arrays;
 
 
 /**
@@ -37,26 +38,26 @@ import lombok.extern.slf4j.Slf4j;
 public class App {
 
 
-  /**
-   * An instance that a console manages two related objects.
-   */
-  public App(String message, String signal) {
-    var console = new CompositeEntity();
-    console.init();
-    console.setData(message, signal);
-    Arrays.stream(console.getData()).forEach(LOGGER::info);
-    console.setData("Danger", "Red Light");
-    Arrays.stream(console.getData()).forEach(LOGGER::info);
-  }
+    /**
+     * An instance that a console manages two related objects.
+     */
+    public App(String message, String signal) {
+        var console = new CompositeEntity();
+        console.init();
+        console.setData(message, signal);
+        Arrays.stream(console.getData()).forEach(LOGGER::info);
+        console.setData("Danger", "Red Light");
+        Arrays.stream(console.getData()).forEach(LOGGER::info);
+    }
 
-  /**
-   * Program entry point.
-   *
-   * @param args command line args
-   */
-  public static void main(String[] args) {
+    /**
+     * Program entry point.
+     *
+     * @param args command line args
+     */
+    public static void main(String[] args) {
 
-    new App("No Danger", "Green Light");
+        new App("No Danger", "Green Light");
 
-  }
+    }
 }

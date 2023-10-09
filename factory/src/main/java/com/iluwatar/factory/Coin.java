@@ -29,6 +29,6 @@ package com.iluwatar.factory;
  */
 public interface Coin {
 
-  String getDescription();
+    String getDescription();
 
 }

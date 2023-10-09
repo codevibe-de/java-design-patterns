@@ -33,25 +33,25 @@ import java.util.List;
  */
 public class OrcKing {
 
-  private List<RequestHandler> handlers;
+    private List<RequestHandler> handlers;
 
-  public OrcKing() {
-    buildChain();
-  }
+    public OrcKing() {
+        buildChain();
+    }
 
-  private void buildChain() {
-    handlers = Arrays.asList(new OrcCommander(), new OrcOfficer(), new OrcSoldier());
-  }
+    private void buildChain() {
+        handlers = Arrays.asList(new OrcCommander(), new OrcOfficer(), new OrcSoldier());
+    }
 
-  /**
-   * Handle request by the chain.
-   */
-  public void makeRequest(Request req) {
-    handlers
-        .stream()
-        .sorted(Comparator.comparing(RequestHandler::getPriority))
-        .filter(handler -> handler.canHandleRequest(req))
-        .findFirst()
-        .ifPresent(handler -> handler.handle(req));
-  }
+    /**
+     * Handle request by the chain.
+     */
+    public void makeRequest(Request req) {
+        handlers
+                .stream()
+                .sorted(Comparator.comparing(RequestHandler::getPriority))
+                .filter(handler -> handler.canHandleRequest(req))
+                .findFirst()
+                .ifPresent(handler -> handler.handle(req));
+    }
 }

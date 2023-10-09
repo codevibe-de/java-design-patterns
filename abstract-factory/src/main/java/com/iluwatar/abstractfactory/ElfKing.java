@@ -29,10 +29,10 @@ package com.iluwatar.abstractfactory;
  */
 public class ElfKing implements King {
 
-  static final String DESCRIPTION = "This is the elven king!";
+    static final String DESCRIPTION = "This is the elven king!";
 
-  @Override
-  public String getDescription() {
-    return DESCRIPTION;
-  }
+    @Override
+    public String getDescription() {
+        return DESCRIPTION;
+    }
 }

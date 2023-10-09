@@ -24,8 +24,9 @@
  */
 package com.iluwatar.interpreter;
 
-import java.util.Stack;
 import lombok.extern.slf4j.Slf4j;
+
+import java.util.Stack;
 
 /**
  * The Interpreter pattern is a design pattern that specifies how to evaluate sentences in a
@@ -38,73 +39,75 @@ import lombok.extern.slf4j.Slf4j;
  *
  * <p>Expressions can be evaluated using prefix, infix or postfix notations This sample uses
  * postfix, where operator comes after the operands.
- *
  */
 @Slf4j
 public class App {
 
-  /**
-   * Program entry point.
-   * @param args program arguments
-   */
-  public static void main(String[] args) {
+    /**
+     * Program entry point.
+     *
+     * @param args program arguments
+     */
+    public static void main(String[] args) {
 
-    // the halfling kids are learning some basic math at school
-    // define the math string we want to parse
-    final var tokenString = "4 3 2 - 1 + *";
+        // the halfling kids are learning some basic math at school
+        // define the math string we want to parse
+        final var tokenString = "4 3 2 - 1 + *";
 
-    // the stack holds the parsed expressions
-    var stack = new Stack<Expression>();
+        // the stack holds the parsed expressions
+        var stack = new Stack<Expression>();
 
-    // tokenize the string and go through them one by one
-    var tokenList = tokenString.split(" ");
-    for (var s : tokenList) {
-      if (isOperator(s)) {
-        // when an operator is encountered we expect that the numbers can be popped from the top of
-        // the stack
-        var rightExpression = stack.pop();
-        var leftExpression = stack.pop();
-        LOGGER.info("popped from stack left: {} right: {}",
-            leftExpression.interpret(), rightExpression.interpret());
-        var operator = getOperatorInstance(s, leftExpression, rightExpression);
-        LOGGER.info("operator: {}", operator);
-        var result = operator.interpret();
-        // the operation result is pushed on top of the stack
-        var resultExpression = new NumberExpression(result);
-        stack.push(resultExpression);
-        LOGGER.info("push result to stack: {}", resultExpression.interpret());
-      } else {
-        // numbers are pushed on top of the stack
-        var i = new NumberExpression(s);
-        stack.push(i);
-        LOGGER.info("push to stack: {}", i.interpret());
-      }
+        // tokenize the string and go through them one by one
+        var tokenList = tokenString.split(" ");
+        for (var s : tokenList) {
+            if (isOperator(s)) {
+                // when an operator is encountered we expect that the numbers can be popped from the top of
+                // the stack
+                var rightExpression = stack.pop();
+                var leftExpression = stack.pop();
+                LOGGER.info("popped from stack left: {} right: {}",
+                        leftExpression.interpret(), rightExpression.interpret());
+                var operator = getOperatorInstance(s, leftExpression, rightExpression);
+                LOGGER.info("operator: {}", operator);
+                var result = operator.interpret();
+                // the operation result is pushed on top of the stack
+                var resultExpression = new NumberExpression(result);
+                stack.push(resultExpression);
+                LOGGER.info("push result to stack: {}", resultExpression.interpret());
+            } else {
+                // numbers are pushed on top of the stack
+                var i = new NumberExpression(s);
+                stack.push(i);
+                LOGGER.info("push to stack: {}", i.interpret());
+            }
+        }
+        // in the end, the final result lies on top of the stack
+        LOGGER.info("result: {}", stack.pop().interpret());
     }
-    // in the end, the final result lies on top of the stack
-    LOGGER.info("result: {}", stack.pop().interpret());
-  }
 
-  /**
-   * Checks whether the input parameter is an operator.
-   * @param s input string
-   * @return true if the input parameter is an operator
-   */
-  public static boolean isOperator(String s) {
-    return s.equals("+") || s.equals("-") || s.equals("*");
-  }
+    /**
+     * Checks whether the input parameter is an operator.
+     *
+     * @param s input string
+     * @return true if the input parameter is an operator
+     */
+    public static boolean isOperator(String s) {
+        return s.equals("+") || s.equals("-") || s.equals("*");
+    }
 
-  /**
-   * Returns correct expression based on the parameters.
-   * @param s input string
-   * @param left expression
-   * @param right expression
-   * @return expression
-   */
-  public static Expression getOperatorInstance(String s, Expression left, Expression right) {
-    return switch (s) {
-      case "+" -> new PlusExpression(left, right);
-      case "-" -> new MinusExpression(left, right);
-      default -> new MultiplyExpression(left, right);
-    };
-  }
+    /**
+     * Returns correct expression based on the parameters.
+     *
+     * @param s     input string
+     * @param left  expression
+     * @param right expression
+     * @return expression
+     */
+    public static Expression getOperatorInstance(String s, Expression left, Expression right) {
+        return switch (s) {
+            case "+" -> new PlusExpression(left, right);
+            case "-" -> new MinusExpression(left, right);
+            default -> new MultiplyExpression(left, right);
+        };
+    }
 }

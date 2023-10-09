@@ -43,45 +43,46 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class App implements Runnable {
 
-  private final Kingdom kingdom = new Kingdom();
+    private final Kingdom kingdom = new Kingdom();
 
-  public Kingdom getKingdom() {
-    return kingdom;
-  }
+    public Kingdom getKingdom() {
+        return kingdom;
+    }
 
-  /**
-   * Program entry point.
-   *
-   * @param args command line args
-   */
-  public static void main(String[] args) {
-    var app = new App();
-    app.run();
-  }
+    /**
+     * Program entry point.
+     *
+     * @param args command line args
+     */
+    public static void main(String[] args) {
+        var app = new App();
+        app.run();
+    }
 
-  @Override
-  public void run() {
-    LOGGER.info("elf kingdom");
-    createKingdom(Kingdom.FactoryMaker.KingdomType.ELF);
-    LOGGER.info(kingdom.getArmy().getDescription());
-    LOGGER.info(kingdom.getCastle().getDescription());
-    LOGGER.info(kingdom.getKing().getDescription());
+    @Override
+    public void run() {
+        LOGGER.info("elf kingdom");
+        createKingdom(Kingdom.FactoryMaker.KingdomType.ELF);
+        LOGGER.info(kingdom.getArmy().getDescription());
+        LOGGER.info(kingdom.getCastle().getDescription());
+        LOGGER.info(kingdom.getKing().getDescription());
 
-    LOGGER.info("orc kingdom");
-    createKingdom(Kingdom.FactoryMaker.KingdomType.ORC);
-    LOGGER.info(kingdom.getArmy().getDescription());
-    LOGGER.info(kingdom.getCastle().getDescription());
-    LOGGER.info(kingdom.getKing().getDescription());
-  }
+        LOGGER.info("orc kingdom");
+        createKingdom(Kingdom.FactoryMaker.KingdomType.ORC);
+        LOGGER.info(kingdom.getArmy().getDescription());
+        LOGGER.info(kingdom.getCastle().getDescription());
+        LOGGER.info(kingdom.getKing().getDescription());
+    }
 
-  /**
-   * Creates kingdom.
-   * @param kingdomType type of Kingdom
-   */
-  public void createKingdom(final Kingdom.FactoryMaker.KingdomType kingdomType) {
-    final KingdomFactory kingdomFactory = Kingdom.FactoryMaker.makeFactory(kingdomType);
-    kingdom.setKing(kingdomFactory.createKing());
-    kingdom.setCastle(kingdomFactory.createCastle());
-    kingdom.setArmy(kingdomFactory.createArmy());
-  }
+    /**
+     * Creates kingdom.
+     *
+     * @param kingdomType type of Kingdom
+     */
+    public void createKingdom(final Kingdom.FactoryMaker.KingdomType kingdomType) {
+        final KingdomFactory kingdomFactory = Kingdom.FactoryMaker.makeFactory(kingdomType);
+        kingdom.setKing(kingdomFactory.createKing());
+        kingdom.setCastle(kingdomFactory.createCastle());
+        kingdom.setArmy(kingdomFactory.createArmy());
+    }
 }

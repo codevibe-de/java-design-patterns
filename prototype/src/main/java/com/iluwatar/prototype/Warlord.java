@@ -34,7 +34,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public abstract class Warlord extends Prototype<Warlord> {
 
-  public Warlord(Warlord source) {
-  }
+    public Warlord(Warlord source) {
+    }
 
 }

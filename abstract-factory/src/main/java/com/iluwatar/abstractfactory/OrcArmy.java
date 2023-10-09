@@ -29,10 +29,10 @@ package com.iluwatar.abstractfactory;
  */
 public class OrcArmy implements Army {
 
-  static final String DESCRIPTION = "This is the orc army!";
+    static final String DESCRIPTION = "This is the orc army!";
 
-  @Override
-  public String getDescription() {
-    return DESCRIPTION;
-  }
+    @Override
+    public String getDescription() {
+        return DESCRIPTION;
+    }
 }

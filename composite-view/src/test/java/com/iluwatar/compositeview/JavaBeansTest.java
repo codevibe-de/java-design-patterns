@@ -83,7 +83,7 @@ class JavaBeansTest {
     }
 
     @Test
-    void testRequestConstructor(){
+    void testRequestConstructor() {
         HttpServletRequest mockReq = Mockito.mock(HttpServletRequest.class);
         ClientPropertiesBean newBean = new ClientPropertiesBean((mockReq));
         assertEquals("DEFAULT_NAME", newBean.getName());

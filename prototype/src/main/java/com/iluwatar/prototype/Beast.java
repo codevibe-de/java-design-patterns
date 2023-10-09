@@ -34,7 +34,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public abstract class Beast extends Prototype<Beast> {
 
-  public Beast(Beast source) {
-  }
+    public Beast(Beast source) {
+    }
 
 }

@@ -14,7 +14,7 @@ Ensure a class only has one instance, and provide a global point of access to it
 
 Real-world example
 
-> There can only be one ivory tower where the wizards study their magic. The same enchanted ivory 
+> There can only be one ivory tower where the wizards study their magic. The same enchanted ivory
 > tower is always used by the wizards. The ivory tower here is a singleton.
 
 In plain words
@@ -23,8 +23,8 @@ In plain words
 
 Wikipedia says
 
-> In software engineering, the singleton pattern is a software design pattern that restricts the 
-> instantiation of a class to one object. This is useful when exactly one object is needed to 
+> In software engineering, the singleton pattern is a software design pattern that restricts the
+> instantiation of a class to one object. This is useful when exactly one object is needed to
 > coordinate actions across the system.
 
 **Programmatic Example**
@@ -63,8 +63,10 @@ enumIvoryTower2=com.iluwatar.singleton.EnumIvoryTower@1221555852
 
 Use the Singleton pattern when
 
-* There must be exactly one instance of a class, and it must be accessible to clients from a well-known access point
-* When the sole instance should be extensible by subclassing, and clients should be able to use an extended instance without modifying their code
+* There must be exactly one instance of a class, and it must be accessible to clients from a
+  well-known access point
+* When the sole instance should be extensible by subclassing, and clients should be able to use an
+  extended instance without modifying their code
 
 Some typical use cases for the Singleton
 
@@ -78,11 +80,11 @@ Some typical use cases for the Singleton
 * [java.awt.Desktop#getDesktop()](http://docs.oracle.com/javase/8/docs/api/java/awt/Desktop.html#getDesktop--)
 * [java.lang.System#getSecurityManager()](http://docs.oracle.com/javase/8/docs/api/java/lang/System.html#getSecurityManager--)
 
-
 ## Consequences
 
 * Violates Single Responsibility Principle (SRP) by controlling their creation and lifecycle.
-* Encourages using a globally shared instance which prevents an object and resources used by this object from being deallocated.     
+* Encourages using a globally shared instance which prevents an object and resources used by this
+  object from being deallocated.
 * Creates tightly coupled code. The clients of the Singleton become difficult to test.
 * Makes it almost impossible to subclass a Singleton.
 

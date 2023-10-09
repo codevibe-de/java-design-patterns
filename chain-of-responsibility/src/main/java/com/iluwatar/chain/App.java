@@ -32,21 +32,21 @@ package com.iluwatar.chain;
  *
  * <p>In this example we organize the request handlers ({@link RequestHandler}) into a chain where
  * each handler has a chance to act on the request on its turn. Here the king ({@link OrcKing})
- * makes requests and the military orcs ({@link OrcCommander}, {@link OrcOfficer}, {@link
- * OrcSoldier}) form the handler chain.
+ * makes requests and the military orcs ({@link OrcCommander}, {@link OrcOfficer},
+ * {@link OrcSoldier}) form the handler chain.
  */
 public class App {
 
-  /**
-   * Program entry point.
-   *
-   * @param args command line args
-   */
-  public static void main(String[] args) {
+    /**
+     * Program entry point.
+     *
+     * @param args command line args
+     */
+    public static void main(String[] args) {
 
-    var king = new OrcKing();
-    king.makeRequest(new Request(RequestType.DEFEND_CASTLE, "defend castle"));
-    king.makeRequest(new Request(RequestType.TORTURE_PRISONER, "torture prisoner"));
-    king.makeRequest(new Request(RequestType.COLLECT_TAX, "collect tax"));
-  }
+        var king = new OrcKing();
+        king.makeRequest(new Request(RequestType.DEFEND_CASTLE, "defend castle"));
+        king.makeRequest(new Request(RequestType.TORTURE_PRISONER, "torture prisoner"));
+        king.makeRequest(new Request(RequestType.COLLECT_TAX, "collect tax"));
+    }
 }

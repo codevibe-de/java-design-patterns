@@ -29,22 +29,23 @@ package com.iluwatar.visitor;
  */
 public class Commander extends Unit {
 
-  public Commander(Unit... children) {
-    super(children);
-  }
+    public Commander(Unit... children) {
+        super(children);
+    }
 
-  /**
-   * Accept a Visitor.
-   * @param visitor UnitVisitor to be accepted
-   */
-  @Override
-  public void accept(UnitVisitor visitor) {
-    visitor.visit(this);
-    super.accept(visitor);
-  }
+    /**
+     * Accept a Visitor.
+     *
+     * @param visitor UnitVisitor to be accepted
+     */
+    @Override
+    public void accept(UnitVisitor visitor) {
+        visitor.visit(this);
+        super.accept(visitor);
+    }
 
-  @Override
-  public String toString() {
-    return "commander";
-  }
+    @Override
+    public String toString() {
+        return "commander";
+    }
 }

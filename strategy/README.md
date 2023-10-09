@@ -12,23 +12,23 @@ Policy
 
 ## Intent
 
-Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets 
+Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets
 the algorithm vary independently of the clients that use it.
 
 ## Explanation
 
 Real-world example
 
-> Slaying dragons is a dangerous job. With experience, it becomes easier. Veteran 
-> dragonslayers have developed different fighting strategies against different types of dragons.         
+> Slaying dragons is a dangerous job. With experience, it becomes easier. Veteran
+> dragonslayers have developed different fighting strategies against different types of dragons.
 
 In plain words
 
-> Strategy pattern allows choosing the best-suited algorithm at runtime.   
+> Strategy pattern allows choosing the best-suited algorithm at runtime.
 
 Wikipedia says
 
-> In computer programming, the strategy pattern (also known as the policy pattern) is a behavioral 
+> In computer programming, the strategy pattern (also known as the policy pattern) is a behavioral
 > software design pattern that enables selecting an algorithm at runtime.
 
 **Programmatic Example**
@@ -70,7 +70,7 @@ public class SpellStrategy implements DragonSlayingStrategy {
 }
 ```
 
-And here is the mighty dragonslayer, who can pick his fighting strategy based on the 
+And here is the mighty dragonslayer, who can pick his fighting strategy based on the
 opponent.
 
 ```java
@@ -170,12 +170,18 @@ The program output is the same as the above one.
 
 Use the Strategy pattern when
 
-* Many related classes differ only in their behavior. Strategies provide a way to configure a class either one of many behaviors
-* You need different variants of an algorithm. for example, you might define algorithms reflecting different space/time trade-offs. Strategies can be used when these variants are implemented as a class hierarchy of algorithms
-* An algorithm uses data that clients shouldn't know about. Use the Strategy pattern to avoid exposing complex algorithm-specific data structures
-* A class defines many behaviors, and these appear as multiple conditional statements in its operations. Instead of many conditionals, move the related conditional branches into their own Strategy class
+* Many related classes differ only in their behavior. Strategies provide a way to configure a class
+  either one of many behaviors
+* You need different variants of an algorithm. for example, you might define algorithms reflecting
+  different space/time trade-offs. Strategies can be used when these variants are implemented as a
+  class hierarchy of algorithms
+* An algorithm uses data that clients shouldn't know about. Use the Strategy pattern to avoid
+  exposing complex algorithm-specific data structures
+* A class defines many behaviors, and these appear as multiple conditional statements in its
+  operations. Instead of many conditionals, move the related conditional branches into their own
+  Strategy class
 
-## Tutorial 
+## Tutorial
 
 * [Strategy Pattern Tutorial](https://www.journaldev.com/1754/strategy-design-pattern-in-java-example-tutorial)
 

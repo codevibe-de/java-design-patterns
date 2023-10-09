@@ -9,13 +9,13 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ObjectGraphicComponent implements GraphicComponent {
 
-  /**
-   * The method updates the graphics based on the velocity of gameObject.
-   *
-   * @param gameObject the gameObject instance
-   */
-  @Override
-  public void update(GameObject gameObject) {
-    LOGGER.info(gameObject.getName() + "'s current velocity: " + gameObject.getVelocity());
-  }
+    /**
+     * The method updates the graphics based on the velocity of gameObject.
+     *
+     * @param gameObject the gameObject instance
+     */
+    @Override
+    public void update(GameObject gameObject) {
+        LOGGER.info(gameObject.getName() + "'s current velocity: " + gameObject.getVelocity());
+    }
 }

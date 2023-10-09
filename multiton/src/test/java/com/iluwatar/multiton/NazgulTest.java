@@ -24,11 +24,9 @@
  */
 package com.iluwatar.multiton;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertSame;
-
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Date: 12/22/15 - 22:28 AM
@@ -37,16 +35,17 @@ import org.junit.jupiter.api.Test;
  */
 class NazgulTest {
 
-  /**
-   * Verify if {@link Nazgul#getInstance(NazgulName)} returns the correct Nazgul multiton instance
-   */
-  @Test
-  void testGetInstance() {
-    for (final var name : NazgulName.values()) {
-      final var nazgul = Nazgul.getInstance(name);
-      assertNotNull(nazgul);
-      assertSame(nazgul, Nazgul.getInstance(name));
-      assertEquals(name, nazgul.getName());
+    /**
+     * Verify if {@link Nazgul#getInstance(NazgulName)} returns the correct Nazgul multiton
+     * instance
+     */
+    @Test
+    void testGetInstance() {
+        for (final var name : NazgulName.values()) {
+            final var nazgul = Nazgul.getInstance(name);
+            assertNotNull(nazgul);
+            assertSame(nazgul, Nazgul.getInstance(name));
+            assertEquals(name, nazgul.getName());
+        }
     }
-  }
 }

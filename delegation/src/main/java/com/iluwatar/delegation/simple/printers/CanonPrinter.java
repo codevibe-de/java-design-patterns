@@ -36,12 +36,12 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class CanonPrinter implements Printer {
 
-  /**
-   * {@inheritDoc}
-   */
-  @Override
-  public void print(String message) {
-    LOGGER.info("Canon Printer : {}", message);
-  }
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void print(String message) {
+        LOGGER.info("Canon Printer : {}", message);
+    }
 
 }

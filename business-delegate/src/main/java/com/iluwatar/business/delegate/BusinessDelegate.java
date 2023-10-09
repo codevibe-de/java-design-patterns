@@ -32,10 +32,10 @@ import lombok.Setter;
 @Setter
 public class BusinessDelegate {
 
-  private BusinessLookup lookupService;
+    private BusinessLookup lookupService;
 
-  public void playbackMovie(String movie) {
-    VideoStreamingService videoStreamingService = lookupService.getBusinessService(movie);
-    videoStreamingService.doProcessing();
-  }
+    public void playbackMovie(String movie) {
+        VideoStreamingService videoStreamingService = lookupService.getBusinessService(movie);
+        videoStreamingService.doProcessing();
+    }
 }

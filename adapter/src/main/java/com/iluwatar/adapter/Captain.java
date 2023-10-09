@@ -36,10 +36,10 @@ import lombok.Setter;
 @AllArgsConstructor
 public final class Captain {
 
-  private RowingBoat rowingBoat;
+    private RowingBoat rowingBoat;
 
-  void row() {
-    rowingBoat.row();
-  }
+    void row() {
+        rowingBoat.row();
+    }
 
 }

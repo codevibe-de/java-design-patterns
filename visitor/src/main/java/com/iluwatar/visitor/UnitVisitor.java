@@ -29,10 +29,10 @@ package com.iluwatar.visitor;
  */
 public interface UnitVisitor {
 
-  void visit(Soldier soldier);
+    void visit(Soldier soldier);
 
-  void visit(Sergeant sergeant);
+    void visit(Sergeant sergeant);
 
-  void visit(Commander commander);
+    void visit(Commander commander);
 
 }

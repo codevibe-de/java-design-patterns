@@ -34,16 +34,16 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ElfMage extends Mage {
 
-  private final String helpType;
+    private final String helpType;
 
-  public ElfMage(ElfMage elfMage) {
-    super(elfMage);
-    this.helpType = elfMage.helpType;
-  }
+    public ElfMage(ElfMage elfMage) {
+        super(elfMage);
+        this.helpType = elfMage.helpType;
+    }
 
-  @Override
-  public String toString() {
-    return "Elven mage helps in " + helpType;
-  }
+    @Override
+    public String toString() {
+        return "Elven mage helps in " + helpType;
+    }
 
 }

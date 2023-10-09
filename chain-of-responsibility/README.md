@@ -8,27 +8,28 @@ tag:
 
 ## Intent
 
-Avoid coupling the sender of a request to its receiver by giving more than one object a chance to 
-handle the request. Chain the receiving objects and pass the request along the chain until an object 
+Avoid coupling the sender of a request to its receiver by giving more than one object a chance to
+handle the request. Chain the receiving objects and pass the request along the chain until an object
 handles it.
 
 ## Explanation
 
 Real-world example
 
-> The Orc King gives loud orders to his army. The closest one to react is the commander, then 
-> an officer, and then a soldier. The commander, officer, and soldier form a chain of responsibility.
+> The Orc King gives loud orders to his army. The closest one to react is the commander, then
+> an officer, and then a soldier. The commander, officer, and soldier form a chain of
+> responsibility.
 
 In plain words
 
-> It helps to build a chain of objects. A request enters from one end and keeps going from an object 
+> It helps to build a chain of objects. A request enters from one end and keeps going from an object
 > to another until it finds a suitable handler.
 
 Wikipedia says
 
-> In object-oriented design, the chain-of-responsibility pattern is a design pattern consisting of 
-> a source of command objects and a series of processing objects. Each processing object contains 
-> logic that defines the types of command objects that it can handle; the rest are passed to the 
+> In object-oriented design, the chain-of-responsibility pattern is a design pattern consisting of
+> a source of command objects and a series of processing objects. Each processing object contains
+> logic that defines the types of command objects that it can handle; the rest are passed to the
 > next processing object in the chain.
 
 **Programmatic Example**
@@ -157,7 +158,8 @@ Orc soldier handling request "collect tax"
 
 Use Chain of Responsibility when
 
-* More than one object may handle a request, and the handler isn't known a priori. The handler should be ascertained automatically.
+* More than one object may handle a request, and the handler isn't known a priori. The handler
+  should be ascertained automatically.
 * You want to issue a request to one of several objects without specifying the receiver explicitly.
 * The set of objects that can handle a request should be specified dynamically.
 

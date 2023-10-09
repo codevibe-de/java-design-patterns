@@ -34,7 +34,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public abstract class Mage extends Prototype<Mage> {
 
-  public Mage(Mage source) {
-  }
+    public Mage(Mage source) {
+    }
 
 }

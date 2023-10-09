@@ -31,7 +31,7 @@ package com.iluwatar.iterator;
  */
 public interface Iterator<T> {
 
-  boolean hasNext();
+    boolean hasNext();
 
-  T next();
+    T next();
 }

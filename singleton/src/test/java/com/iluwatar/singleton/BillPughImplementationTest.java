@@ -6,7 +6,7 @@ package com.iluwatar.singleton;
  * @author Owen Leung
  */
 public class BillPughImplementationTest
-        extends SingletonTest<BillPughImplementation>{
+        extends SingletonTest<BillPughImplementation> {
     /**
      * Create a new singleton test instance using the given 'getInstance' method.
      */

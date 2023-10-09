@@ -29,11 +29,11 @@ package com.iluwatar.chain;
  */
 public interface RequestHandler {
 
-  boolean canHandleRequest(Request req);
+    boolean canHandleRequest(Request req);
 
-  int getPriority();
+    int getPriority();
 
-  void handle(Request req);
+    void handle(Request req);
 
-  String name();
+    String name();
 }

@@ -29,5 +29,5 @@ package com.iluwatar.business.delegate;
  */
 public interface VideoStreamingService {
 
-  void doProcessing();
+    void doProcessing();
 }

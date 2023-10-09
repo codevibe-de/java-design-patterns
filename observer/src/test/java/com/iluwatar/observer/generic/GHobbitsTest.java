@@ -25,6 +25,7 @@
 package com.iluwatar.observer.generic;
 
 import com.iluwatar.observer.WeatherType;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -35,21 +36,21 @@ import java.util.List;
  */
 class GHobbitsTest extends ObserverTest<GenHobbits> {
 
-  @Override
-  public Collection<Object[]> dataProvider() {
-    return List.of(
-        new Object[]{WeatherType.SUNNY, "The hobbits are facing Sunny weather now"},
-        new Object[]{WeatherType.RAINY, "The hobbits are facing Rainy weather now"},
-        new Object[]{WeatherType.WINDY, "The hobbits are facing Windy weather now"},
-        new Object[]{WeatherType.COLD, "The hobbits are facing Cold weather now"}
-    );
-  }
+    @Override
+    public Collection<Object[]> dataProvider() {
+        return List.of(
+                new Object[]{WeatherType.SUNNY, "The hobbits are facing Sunny weather now"},
+                new Object[]{WeatherType.RAINY, "The hobbits are facing Rainy weather now"},
+                new Object[]{WeatherType.WINDY, "The hobbits are facing Windy weather now"},
+                new Object[]{WeatherType.COLD, "The hobbits are facing Cold weather now"}
+        );
+    }
 
-  /**
-   * Create a new test with the given weather and expected response
-   */
-  public GHobbitsTest() {
-    super(GenHobbits::new);
-  }
+    /**
+     * Create a new test with the given weather and expected response
+     */
+    public GHobbitsTest() {
+        super(GenHobbits::new);
+    }
 
 }

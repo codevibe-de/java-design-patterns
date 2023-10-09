@@ -15,20 +15,20 @@ Use sharing to support large numbers of fine-grained objects efficiently.
 
 Real-world example
 
-> Alchemist's shop has shelves full of magic potions. Many of the potions are the same so there is 
-> no need to create a new object for each of them. Instead, one object instance can represent 
+> Alchemist's shop has shelves full of magic potions. Many of the potions are the same so there is
+> no need to create a new object for each of them. Instead, one object instance can represent
 > multiple shelf items so the memory footprint remains small.
 
 In plain words
 
-> It is used to minimize memory usage or computational expenses by sharing as much as possible with 
+> It is used to minimize memory usage or computational expenses by sharing as much as possible with
 > similar objects.
 
 Wikipedia says
 
-> In computer programming, flyweight is a software design pattern. A flyweight is an object that 
-> minimizes memory use by sharing as much data as possible with other similar objects; it is a way 
-> to use objects in large numbers when a simple repeated representation would use an unacceptable 
+> In computer programming, flyweight is a software design pattern. A flyweight is an object that
+> minimizes memory use by sharing as much data as possible with other similar objects; it is a way
+> to use objects in large numbers when a simple repeated representation would use an unacceptable
 > amount of memory.
 
 **Programmatic example**
@@ -184,20 +184,21 @@ You feel blessed. (Potion=991505714)
 
 ## Applicability
 
-The Flyweight pattern's effectiveness depends heavily on how and where it's used. Apply the 
+The Flyweight pattern's effectiveness depends heavily on how and where it's used. Apply the
 Flyweight pattern when all of the following are true:
 
 * An application uses a large number of objects.
 * Storage costs are high because of the sheer quantity of objects.
 * Most of the object state can be made extrinsic.
-* Many groups of objects may be replaced by relatively few shared objects once the extrinsic state 
+* Many groups of objects may be replaced by relatively few shared objects once the extrinsic state
   is removed.
-* The application doesn't depend on object identity. Since flyweight objects may be shared, identity 
-tests will return true for conceptually distinct objects.
+* The application doesn't depend on object identity. Since flyweight objects may be shared, identity
+  tests will return true for conceptually distinct objects.
 
 ## Known uses
 
-* [java.lang.Integer#valueOf(int)](http://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html#valueOf%28int%29) and similarly for Byte, Character and other wrapped types.
+* [java.lang.Integer#valueOf(int)](http://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html#valueOf%28int%29)
+  and similarly for Byte, Character and other wrapped types.
 
 ## Credits
 

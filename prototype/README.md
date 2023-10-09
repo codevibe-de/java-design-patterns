@@ -9,17 +9,19 @@ tag:
 
 ## Intent
 
-Specify the kinds of objects to create using a prototypical instance, and create new objects by 
+Specify the kinds of objects to create using a prototypical instance, and create new objects by
 copying this prototype.
 
 ## Explanation
 
-First, it should be noted that the Prototype pattern is not used to gain performance benefits. It's only 
+First, it should be noted that the Prototype pattern is not used to gain performance benefits. It's
+only
 used for creating new objects from prototype instances.
 
 Real-world example
 
-> Remember Dolly? The sheep that was cloned! Let's not get into the details but the key point here is 
+> Remember Dolly? The sheep that was cloned! Let's not get into the details but the key point here
+> is
 > that it is all about cloning.
 
 In plain words
@@ -28,11 +30,11 @@ In plain words
 
 Wikipedia says
 
-> The prototype pattern is a creational design pattern in software development. It is used when the 
-> type of objects to create is determined by a prototypical instance, which is cloned to produce new 
+> The prototype pattern is a creational design pattern in software development. It is used when the
+> type of objects to create is determined by a prototypical instance, which is cloned to produce new
 > objects.
 
-In short, it allows you to create a copy of an existing object and modify it to your needs, instead 
+In short, it allows you to create a copy of an existing object and modify it to your needs, instead
 of going through the trouble of creating an object from scratch and setting it up.
 
 **Programmatic Example**
@@ -163,14 +165,14 @@ Orcish wolf attacks with laser
 
 ## Applicability
 
-Use the Prototype pattern when a system should be independent of how its products are created, 
+Use the Prototype pattern when a system should be independent of how its products are created,
 composed, represented and
 
 * When the classes to instantiate are specified at run-time, for example, by dynamic loading.
 * To avoid building a class hierarchy of factories that parallels the class hierarchy of products.
-* When instances of a class can have one of only a few different combinations of state. It may be 
-more convenient to install a corresponding number of prototypes and clone them rather than 
-instantiating the class manually, each time with the appropriate state.
+* When instances of a class can have one of only a few different combinations of state. It may be
+  more convenient to install a corresponding number of prototypes and clone them rather than
+  instantiating the class manually, each time with the appropriate state.
 * When object creation is expensive compared to cloning.
 
 ## Known uses

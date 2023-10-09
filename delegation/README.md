@@ -7,18 +7,20 @@ tag:
 ---
 
 ## Also known as
+
 Proxy Pattern
 
 ## Intent
-It is a technique where an object expresses certain behavior to the outside but in 
-reality delegates responsibility for implementing that behaviour to an associated object. 
+
+It is a technique where an object expresses certain behavior to the outside but in
+reality delegates responsibility for implementing that behaviour to an associated object.
 
 ## Explanation
 
 Real-world example
 
-> Imagine that we have adventurers who fight monsters with different weapons depending on their 
-> abilities and skills. We must be able to equip them with different ones without having to 
+> Imagine that we have adventurers who fight monsters with different weapons depending on their
+> abilities and skills. We must be able to equip them with different ones without having to
 > modify their source code for each one. The delegation pattern makes it possible by delegating
 > the dynamic work to a specific object implementing an interface with relevant methods.
 
@@ -26,13 +28,14 @@ Wikipedia says
 
 > In object-oriented programming, delegation refers to evaluating a member (property or method) of
 > one object (the receiver) in the context of another original object (the sender). Delegation can
-> be done explicitly, by passing the sending object to the receiving object, which can be done in 
-> any object-oriented language; or implicitly, by the member lookup rules of the language, which 
+> be done explicitly, by passing the sending object to the receiving object, which can be done in
+> any object-oriented language; or implicitly, by the member lookup rules of the language, which
 > requires language support for the feature.
 
 **Programmatic Example**
 
-We have an interface `Printer` and three implementations `CanonPrinter`, `EpsonPrinter` and `HpPrinter`.
+We have an interface `Printer` and three implementations `CanonPrinter`, `EpsonPrinter`
+and `HpPrinter`.
 
 ```java
 public interface Printer {
@@ -63,8 +66,10 @@ public class HpPrinter implements Printer {
   }
 }
 ```
-The `PrinterController` can be used as a `Printer` by delegating any work handled by this 
+
+The `PrinterController` can be used as a `Printer` by delegating any work handled by this
 interface to an object implementing it.
+
 ```java
 public class PrinterController implements Printer {
   
@@ -82,7 +87,7 @@ public class PrinterController implements Printer {
 ```
 
 Now on the client code printer controllers can print messages differently depending on the
-object they're delegating that work to. 
+object they're delegating that work to.
 
 ```java
 private static final String MESSAGE_TO_PRINT = "hello world";
@@ -105,9 +110,11 @@ Epson Printer : hello world
 ```
 
 ## Class diagram
+
 ![alt text](./etc/delegation.png "Delegate")
 
 ## Applicability
+
 Use the Delegate pattern in order to achieve the following
 
 * Reduce the coupling of methods to their class

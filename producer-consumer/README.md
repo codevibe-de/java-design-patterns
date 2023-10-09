@@ -7,33 +7,38 @@ tag:
 ---
 
 ## Intent
-Producer Consumer Design pattern is a classic concurrency pattern which reduces
- coupling between Producer and Consumer by separating Identification of work with Execution of
- Work.
 
-## Explanation 
+Producer Consumer Design pattern is a classic concurrency pattern which reduces
+coupling between Producer and Consumer by separating Identification of work with Execution of
+Work.
+
+## Explanation
 
 Real-world example
 
-> Consider a manufacturing process of item, the producer will need to pause the production when 
-> manufacturing pipeline is full and the consumer will need to pause the consumption of item 
-> when the manufacturing pipeline is empty. We can separate the process of production and consumption 
-> which work together and pause at separate times. 
+> Consider a manufacturing process of item, the producer will need to pause the production when
+> manufacturing pipeline is full and the consumer will need to pause the consumption of item
+> when the manufacturing pipeline is empty. We can separate the process of production and
+> consumption
+> which work together and pause at separate times.
 
 In plain words
 
-> It provides a way to share data between multiple loops running at different rates. 
+> It provides a way to share data between multiple loops running at different rates.
 
 Wikipedia says
-> Dijkstra wrote about the case: "We consider two processes, which are called the 'producer' 
-> and the 'consumer' respectively. The producer is a cyclic process that produces a certain 
-> portion of information, that has to be processed by the consumer. The consumer is also a cyclic 
-> process that needs to process the next portion of information, as has been produced by the producer 
-> We assume the two processes to be connected for this purpose via a buffer with unbounded capacity."
+> Dijkstra wrote about the case: "We consider two processes, which are called the 'producer'
+> and the 'consumer' respectively. The producer is a cyclic process that produces a certain
+> portion of information, that has to be processed by the consumer. The consumer is also a cyclic
+> process that needs to process the next portion of information, as has been produced by the
+> producer
+> We assume the two processes to be connected for this purpose via a buffer with unbounded
+> capacity."
 
 **Programmatic Example**
 
-Take our Producer and Consumer example from above. Consider we have a `Item` class that is produced by `Producer` class and is added to the `ItemQueue`. 
+Take our Producer and Consumer example from above. Consider we have a `Item` class that is produced
+by `Producer` class and is added to the `ItemQueue`.
 
 ```java
 public class Producer {
@@ -64,7 +69,7 @@ public class Producer {
 
 ```
 
-Then, we have the `Consumer` class that takes the item from the item queue. 
+Then, we have the `Consumer` class that takes the item from the item queue.
 
 ```java
 
@@ -92,7 +97,8 @@ public class Consumer {
 }
 ``` 
 
-Now, during the manufacturing pipeline, we can instantiate objects from both the `Producer` and `Consumer` clasess as they produce and consumer items from the queue. 
+Now, during the manufacturing pipeline, we can instantiate objects from both the `Producer`
+and `Consumer` clasess as they produce and consumer items from the queue.
 
 ```java
 var queue = new ItemQueue();
@@ -118,11 +124,12 @@ for (var i = 0; i < 3; i++) {
 
 ```
 
-
 ## Class diagram
+
 ![alt text](./etc/producer-consumer.png "Producer Consumer")
 
 ## Applicability
+
 Use the Producer Consumer idiom when
 
 * Decouple system by separate work in two process produce and consume.

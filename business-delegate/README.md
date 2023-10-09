@@ -27,9 +27,9 @@ In Plain Words
 
 Wikipedia says
 
-> Business delegate is a Java EE design pattern. This pattern is directing to reduce the coupling 
-> in between business services and the connected presentation tier, and to hide the implementation 
-> details of services (including lookup and accessibility of EJB architecture). Business delegates 
+> Business delegate is a Java EE design pattern. This pattern is directing to reduce the coupling
+> in between business services and the connected presentation tier, and to hide the implementation
+> details of services (including lookup and accessibility of EJB architecture). Business delegates
 > acts as an adaptor to invoke business objects from the presentation tier.
 
 **Programmatic Example**

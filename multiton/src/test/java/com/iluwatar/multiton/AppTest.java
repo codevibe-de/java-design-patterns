@@ -24,9 +24,9 @@
  */
 package com.iluwatar.multiton;
 
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
-
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 /**
  * Test if the application starts without throwing an exception.
@@ -34,8 +34,8 @@ import org.junit.jupiter.api.Test;
 
 class AppTest {
 
-  @Test
-  void shouldExecuteApplicationWithoutException() {
-    assertDoesNotThrow(() -> App.main(new String[]{}));
-  }
+    @Test
+    void shouldExecuteApplicationWithoutException() {
+        assertDoesNotThrow(() -> App.main(new String[]{}));
+    }
 }
